@@ -15,7 +15,7 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'bundles/webpack.bundle.spec.espowered.js'
+      'bundles/webpack.bundle.spec.espowered.js' // webpackにより生成されるファイル。
     ],
 
 
@@ -25,15 +25,13 @@ module.exports = function (config) {
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-      // 'bundles/**/*.js': ['webpack', 'sourcemap'] // これが要るのか要らないのかよくわからない。
-    },
+    preprocessors: {},
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['mocha'],
 
 
     // web server port
@@ -66,5 +64,12 @@ module.exports = function (config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity,
+
+
+    mochaReporter: {
+      colors: {
+        success: 'white',
+      }
+    },
   })
 }
