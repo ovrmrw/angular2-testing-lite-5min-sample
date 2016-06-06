@@ -8,7 +8,6 @@ import assert from 'power-assert';
 import {inject, async, TestComponentBuilder} from 'angular2-testing-lite/core';
 import {describe, it, xit, beforeEach} from 'angular2-testing-lite/mocha';
 import {By} from "@angular/platform-browser";
-import 'rxjs/Rx';
 
 
 // テストの書き方とかよく知らないので中身は適当です。
